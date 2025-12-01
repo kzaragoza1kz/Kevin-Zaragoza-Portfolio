@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Kevin Zaragoza</title>
+  <link rel="stylesheet" href="Homestyle.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html" class="active">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="about.html">About Me</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main>
+
+  <section class="intro">
+    <article class="intro-text">
+      <h1>Hello. My<br>Name is Kevin<br>Zaragoza</h1>
+      <p>I am a computer science student in Chicago. Feel free to browse my projects and contact my socials.</p>
+    </article>
+
+    <figure class="intro-image-frame">
+      <img src="ChicagoSkyline.jpg" class="home-image">
+    </figure>
+  </section>
+
+  <section class="email-signup">
+    <h2>Join My Tech Updates</h2>
+    <p>Get alerts when I upload new projects.</p>
+
+    <form id="emailForm">
+      <input type="email" id="emailInput" placeholder="Enter your email">
+      <button type="button" onclick="signup()">Sign Up</button>
+    </form>
+
+    <p id="emailMessage"></p>
+  </section>
+
+  <section class="svg-section">
+    <h2>Site Badge</h2>
+
+    <svg width="140" height="140" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="45" fill="#7b5cff"/>
+      <text x="50" y="58" text-anchor="middle" font-size="22" fill="white" font-family="Arial">KZ</text>
+    </svg>
+
+  </section>
+
+</main>
+
+<script>
+function signup() {
+  let email = document.getElementById("emailInput").value;
+  let msg = document.getElementById("emailMessage");
+
+  if(email === "") {
+    msg.style.color = "red";
+    msg.textContent = "Please enter an email.";
+  } else {
+    msg.style.color = "#7b5cff";
+    msg.textContent = "Thanks! You’re now subscribed.";
+    document.getElementById("emailInput").value = "";
+  }
+}
+</script>
+
+</body>
+</html>

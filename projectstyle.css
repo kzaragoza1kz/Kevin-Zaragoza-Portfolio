@@ -1,0 +1,70 @@
+body {
+  background-color: #000;
+  color: white;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  margin-top: 20px;
+  text-align: center;
+}
+
+nav a {
+  color: gray;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+nav a.active {
+  color: white;
+}
+
+.projects-section h1 {
+  text-align: center;
+  margin-top: 120px;
+  font-size: 2.4em;
+}
+
+.subtitle {
+  text-align: center;
+  color: #999;
+  margin-top: 10px;
+  font-size: 1.1em;
+}
+
+.projects-grid {
+  max-width: 1100px;
+  margin: 60px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  padding: 20px;
+}
+
+.project-card {
+  background-color: #111;
+  height: 170px;
+  border-radius: 20px;
+  opacity: 0.7;
+  transition: 0.2s ease-in-out;
+}
+
+.project-card:hover {
+  opacity: 1;
+  transform: scale(1.04);
+}
+
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
